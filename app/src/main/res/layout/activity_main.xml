@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="速度距离时间换算"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/speed_distance_time_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForTime"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewDistanceForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="距离" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberDistanceForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        tools:hint="distance" />
+
+                    <TextView
+                        android:id="@+id/textViewDistanceUnitForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="km" />
+
+                    <TextView
+                        android:id="@+id/textViewSpeedForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="速度" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberSeepForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:hint="speed" />
+
+                    <Button
+                        android:id="@+id/buttonSelectSpeedForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/select_launch"></Button>
+
+                    <TextView
+                        android:id="@+id/textViewSpeedUnitForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="km/h" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10">
+
+
+                        <Button
+                            android:id="@+id/buttonCalculateForTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_calculate"
+                            android:gravity="center"
+                            android:text="计算"></Button>
+
+                        <Button
+                            android:id="@+id/buttonRemoveForTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_remove"
+                            android:gravity="center"
+                            android:text="清空"></Button>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewTimeForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="时间=" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeShowForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        tools:hint="time" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeUnitForTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="s" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textViewDistanceForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="距离" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberDistanceForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:hint="distance" />
+
+                    <TextView
+                        android:id="@+id/textViewDistanceUnitForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="km" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="时间" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberTimeForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+
+                        tools:hint="time" />
+
+                    <Button
+                        android:id="@+id/buttonSelectTimeForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/select_launch"></Button>
+
+                    <TextView
+                        android:id="@+id/textViewTimeUnitForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonCalculateForSpeed"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_calculate"
+                            android:gravity="center"
+                            android:text="计算"></Button>
+
+                        <Button
+                            android:id="@+id/buttonRemoveForSpeed"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_remove"
+                            android:gravity="center"
+                            android:text="清空"></Button>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewSpeedForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="速度=" />
+
+                    <TextView
+                        android:id="@+id/textViewSpeedShowForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        tools:hint="speed" />
+
+                    <TextView
+                        android:id="@+id/textViewSpeedUnitForSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="km/h" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForDistance"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSpeedForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="速度" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberSpeedForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:hint="speed" />
+
+                    <!--                    <Button-->
+                    <!--                        android:id="@+id/buttonSelectSpeedForDistance"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@mipmap/select_launch"></Button>-->
+
+                    <TextView
+                        android:id="@+id/textViewSpeedUnitForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="km/h" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="时间" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberTimeForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:hint="time" />
+
+                    <!--                    <Button-->
+                    <!--                        android:id="@+id/buttonSelectTimeForDistance"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@mipmap/select_launch"></Button>-->
+
+                    <TextView
+                        android:id="@+id/textViewTimeUnitForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10">
+
+                        <Button
+                            android:id="@+id/buttonCalculateForDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_calculate"
+                            android:gravity="center"
+                            android:text="计算"></Button>
+
+                        <Button
+                            android:id="@+id/buttonRemoveForDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/btn_remove"
+                            android:gravity="center"
+                            android:text="清空"></Button>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewDistanceForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/speed_distance_time_normal_textview"
+                        android:gravity="center"
+                        android:text="距离=" />
+
+                    <TextView
+                        android:id="@+id/textViewDistanceShowForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        tools:hint="distance" />
+
+                    <TextView
+                        android:id="@+id/textViewDistanceUnitForDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="km"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonDistanceTimeSpeedClean"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_clean"
+                    android:text="清空所有"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="二转弯修正计算"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/speed_distance_time_background"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

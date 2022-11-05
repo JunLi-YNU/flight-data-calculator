@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flight Data Calculator</string>
+    <string name="input_text_weight">35dp</string>
+    <string name="output_text_weight">40dp</string>
+</resources>
